@@ -18,10 +18,14 @@ After the tests are done the webserver is stopped.
 ```
 git clone https://github.com/csgruenebe/showcase-testcafe-e2e-tests-angular.git
 cd showcase-testcafe-e2e-tests-angular
-npm install 
+npm install
 
 npm run build
 npm run test:e2e
+
+# or headless
+
+npm run test:e2e:headless
 ```
 
 
@@ -30,10 +34,14 @@ npm run test:e2e
 
 ### Usage Example 2: Docker
 
-Scenario 1: [Predefined Docker Image](http://devexpress.github.io/testcafe/documentation/using-testcafe/installing-testcafe.html#using-testcafe-docker-image)
+Run with [Predefined Docker Image](http://devexpress.github.io/testcafe/documentation/using-testcafe/installing-testcafe.html#using-testcafe-docker-image)
 
-Scenario 2: Custom Image
 
+:bangbang: can currently not start webserver
+
+```
+docker run -v $(pwd):/tests -it testcafe/testcafe 'chromium --no-sandbox' /tests/e2e-testcafe/test-dashboard.ts
+```
 
 ----
 &nbsp;

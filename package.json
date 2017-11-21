@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "test:e2e": "./node_modules/.bin/testcafe chrome ./e2e-testcafe/test-dashboard.ts"
+    "test:e2e": "./node_modules/.bin/testcafe chrome ./e2e-testcafe/test-dashboard.ts",
+    "test:e2e:headless": "./node_modules/.bin/testcafe \"chrome:headless\" ./e2e-testcafe/test-dashboard.ts"
   },
   "private": true,
   "dependencies": {
